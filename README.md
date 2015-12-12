@@ -1,2 +1,12 @@
-# CurvesCpp
-A simple set of utility functions for mapping geometric paths.
+# OMath
+A simple set of static utility functions in C++ for geometric mathematics.
+
+## Curves
+#### Bicorn
+#### Kappa
+#### Bow
+#### Diamond
+#### Chrysanthemum
+#### Butterfly
+## Interpolation
+#### Linear
