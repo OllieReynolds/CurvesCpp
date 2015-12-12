@@ -42,21 +42,21 @@ private:
 
 public:
 	/// Bicorn Curve: http://paulbourke.net/geometry/bicorn/
-	static vec2<T> Bicorn(T t, T w, T h) {
+	static vec2 Bicorn(T t, T w, T h) {
 		float x = (w / 2) * sin(t) + (w / 2);
 		float y = (h / 2) * pow(cos(t), 2) * (2 + cos(t)) / (3 + pow(sin(t), 2));
 		return std::make_tuple(x, y);
 	}
 
 	/// Kappa Curve: http://paulbourke.net/geometry/kappa/
-	static vec2<T> Kappa(T t, T w, T h) {
+	static vec2 Kappa(T t, T w, T h) {
 		float x = (w / 2) * pow(cos(t), 2) / sin(t) + (w / 2);
 		float y = (h / 2) * cos(t) + (h / 2);
 		return std::make_tuple(x, y);
 	}
 
 	/// Bow Curve: http://paulbourke.net/geometry/bow2d/
-	static vec2<T> Bow(T t, T w, T h) {
+	static vec2 Bow(T t, T w, T h) {
 		float a = 1 - pow(tan(t), 2);
 		float x = (w / 2) * a * cos(t) + (w / 2);
 		float y = (h / 2) * a * sin(t) + (h / 2);
@@ -64,14 +64,14 @@ public:
 	}
 
 	/// Diamond: http://paulbourke.net/geometry/diamond/
-	static vec2<T> Diamond(T t, T w, T h) {
+	static vec2 Diamond(T t, T w, T h) {
 		float x = (w / 2) * cos(t) * sqrtf(pow(cos(t), 2)) + (w / 2);
 		float y = (h / 2) * sin(t) * sqrtf(pow(sin(t), 2)) + (h / 2);
 		return std::make_tuple(x, y);
 	}
 
 	/// Chrysanthemum: http://paulbourke.net/geometry/chrysanthemum/
-	static vec2<T> Chrysanthemum(T t, T w, T h) {
+	static vec2 Chrysanthemum(T t, T w, T h) {
 		float r = 5 * (1 + sin(11 * t / 5)) - 4 * pow(sin(17 * t / 3), 4) * pow(sin(2 * cos(3 * t) - 28 * t), 8);
 		float x = (w / 20) * r * cos(t) + (w / 2);
 		float y = (h / 20) * r * sin(t) + (h / 2);
@@ -79,7 +79,7 @@ public:
 	}
 
 	/// Butterfly: http://paulbourke.net/geometry/butterfly/
-	static vec2<T> Butterfly(T t, T w, T h) {
+	static vec2 Butterfly(T t, T w, T h) {
 		float r = exp(cos(t)) - 2 * cos(4 * t) - pow(sin(t / 12), 5);
 		float x = (w / 2) * r * cos(t) + (w / 2);
 		float y = (h / 2) * r * sin(t) + (h / 2);
